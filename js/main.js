@@ -109,10 +109,9 @@ function openDetails(id){
   document.getElementById("dTitle").textContent = `${t.flag} ${t.name[LANG]}`;
   document.getElementById("dDesc").textContent = t.desc[LANG];
   document.getElementById("dMeta").innerHTML =
-    `<span>💵 ${d.tour_from} $${t.price}</span><span>🗓 ${t.days} ${d.tour_days}</span><span>👥 ${t.capacity}</span>`;
-  document.getElementById("dDates").innerHTML =
-    `<strong>${d.details_dates}:</strong> ` +
-    t.available.map(([f,to])=>`<span class="date-chip">${fmtDate(f)} – ${fmtDate(to)}</span>`).join(" ");
+    `<span>💵 ${d.tour_from} $${t.price}</span><span>🗓 ${t.days} ${d.tour_days}</span><span>👥 ${d.details_group} ${t.capacity}</span>`;
+  document.getElementById("dIncludes").innerHTML =
+    d.includes.map(x=>`<li>${x}</li>`).join("");
   const bookBtn = document.getElementById("dBook");
   bookBtn.textContent = d.tour_book;
   bookBtn.onclick = ()=>{ closeDetails(); openBooking(id); };

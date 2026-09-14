@@ -226,9 +226,12 @@ h1,h2,h3,h4{font-family:'Poppins',sans-serif;line-height:1.2}
 .details__img{width:100%;height:210px;object-fit:cover;border-radius:12px;margin-bottom:16px}
 .details__desc{color:var(--muted);margin:4px 0 14px}
 .details__meta{display:flex;flex-wrap:wrap;gap:16px;color:var(--ink);font-weight:600;font-size:14px;margin-bottom:14px}
-.details__dates{font-size:14px;color:var(--muted);margin-bottom:18px}
-.date-chip{display:inline-block;background:var(--bg-alt);color:var(--ink);border-radius:8px;padding:4px 10px;margin:4px 4px 0 0;font-size:13px}
+.details__info{background:var(--bg-alt);border-radius:12px;padding:16px 18px;margin-bottom:18px}
+.details__info-title{font-size:15px;color:var(--heading);margin-bottom:10px}
+.details__includes{list-style:none;display:grid;grid-template-columns:1fr 1fr;gap:8px 18px}
+.details__includes li{font-size:14px;color:var(--ink);display:flex;align-items:center;gap:6px}
 .details__book{width:100%}
+@media(max-width:520px){.details__includes{grid-template-columns:1fr}}
 .modal__tour{color:var(--gold);font-weight:700;margin:6px 0 18px}
 .bookform{display:flex;flex-direction:column;gap:14px}
 .bookform label{display:flex;flex-direction:column;gap:6px;font-size:13px;font-weight:600;color:var(--muted)}

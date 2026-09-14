@@ -43,7 +43,16 @@ const I18N = {
     res_no:"Afsuski, tanlangan sanaga bu yo‘nalishda tour yo‘q. Boshqa sana tanlang yoki konsultatsiya oling.",
     res_people:"Kishilar soni ushbu tour sig‘imidan oshib ketdi (maks:",
     res_book:"Bron qilish",
-    details_dates:"Mavjud sanalar",
+    details_group:"guruh, gacha",
+    details_includes:"Narxga nima kiradi",
+    includes:[
+      "✈️ Aviabilet (borish–kelish)",
+      "🏨 Mehmonxona (3–5⭐)",
+      "🚐 Transfer (aeroport ⇄ mehmonxona)",
+      "🧭 Professional gid hamrohligi",
+      "🛡️ Tibbiy sug‘urta",
+      "🍽️ Nonushta va ekskursiyalar"
+    ],
   },
 
   ru: {
@@ -89,7 +98,16 @@ const I18N = {
     res_no:"К сожалению, на выбранную дату тура по этому направлению нет. Выберите другую дату или получите консультацию.",
     res_people:"Число путешественников превышает вместимость тура (макс:",
     res_book:"Забронировать",
-    details_dates:"Доступные даты",
+    details_group:"группа, до",
+    details_includes:"Что входит в стоимость",
+    includes:[
+      "✈️ Авиабилеты (туда–обратно)",
+      "🏨 Отель (3–5⭐)",
+      "🚐 Трансфер (аэропорт ⇄ отель)",
+      "🧭 Сопровождение профессионального гида",
+      "🛡️ Медицинская страховка",
+      "🍽️ Завтрак и экскурсии"
+    ],
   },
 
   en: {
@@ -135,6 +153,15 @@ const I18N = {
     res_no:"Unfortunately there is no tour to this destination on the selected date. Try another date or get a consultation.",
     res_people:"Number of travelers exceeds tour capacity (max:",
     res_book:"Book now",
-    details_dates:"Available dates",
+    details_group:"group, up to",
+    details_includes:"What's included in the price",
+    includes:[
+      "✈️ Round-trip flights",
+      "🏨 Hotel (3–5⭐)",
+      "🚐 Airport transfer (both ways)",
+      "🧭 Professional guide",
+      "🛡️ Medical insurance",
+      "🍽️ Breakfast & excursions"
+    ],
   }
 };
