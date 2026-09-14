@@ -8,7 +8,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="css/styles.css?v=11" />
+  <link rel="stylesheet" href="css/styles.css?v=12" />
 </head>
 <body>
 
@@ -49,11 +49,10 @@
 
   <!-- ===================== HERO ===================== -->
   <section class="hero">
-    <!-- O'z rasmingizni assets/hero.jpg ga saqlang — avtomatik ishlatiladi.
-         Agar topilmasa, quyidagi zaxira (Maldiv orollari) rasmi ko'rsatiladi. -->
-    <img class="hero__video ken-burns" src="assets/hero.jpg"
-         alt="Maldiv orollari"
-         onerror="this.onerror=null;this.src='https://images.unsplash.com/photo-1573843981267-be1999ff37cd?w=1920&q=80'" />
+    <!-- Hero fon videosi (Maldiv orollari). Poster = assets/hero.jpg (video yuklanguncha) -->
+    <video class="hero__video" autoplay muted loop playsinline poster="assets/hero.jpg">
+      <source src="assets/hero.mp4" type="video/mp4" />
+    </video>
     <div class="hero__overlay"></div>
 
     <div class="container hero__content">
@@ -173,7 +172,7 @@
       </div>
       <figure class="about__cert">
         <!-- Guvohnoma originalini assets/certificate.jpg ga saqlang -->
-        <img src="assets/certificate.jpg" alt="City Trips — davlat ro‘yxatidan o‘tkazilganlik guvohnomasi"
+        <img src="assets/certificate.png" alt="City Trips — davlat ro‘yxatidan o‘tkazilganlik guvohnomasi"
              onerror="this.onerror=null;this.src='assets/certificate.svg'" />
         <figcaption data-i18n="about_cert">Official state registration certificate</figcaption>
       </figure>
@@ -256,8 +255,8 @@
     </div>
   </div>
 
-  <script src="js/translations.js?v=11"></script>
-  <script src="js/tours.js?v=11"></script>
-  <script src="js/main.js?v=11"></script>
+  <script src="js/translations.js?v=12"></script>
+  <script src="js/tours.js?v=12"></script>
+  <script src="js/main.js?v=12"></script>
 </body>
 </html>

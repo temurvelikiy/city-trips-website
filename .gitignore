@@ -5,3 +5,6 @@ Thumbs.db
 
 # Reference screenshots (not part of the site)
 photo_*.jpg
+
+# Source assets (copied into assets/)
+homepage/
