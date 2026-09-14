@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>City Trips — Unforgettable Journeys</title>
+  <meta name="description" content="City Trips — sharq va Turkiya bo'ylab unutilmas sayohatlar. Tour bron qiling." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/styles.css?v=11" />
+</head>
+<body>
+
+  <!-- ===================== HEADER ===================== -->
+  <header class="header" id="top">
+    <div class="container header__inner">
+      <a href="#top" class="logo">
+        <img class="logo__img" src="assets/logo.png" alt="City Trips — Travel. Trusted. Together."
+             onerror="this.onerror=null;this.src='assets/logo.svg'" />
+      </a>
+
+      <nav class="nav" id="nav">
+        <a href="#top" data-i18n="nav_home">Home</a>
+        <a href="#tours" data-i18n="nav_tours">Tours</a>
+        <a href="#why" data-i18n="nav_why">Why us</a>
+        <a href="#reviews" data-i18n="nav_reviews">Reviews</a>
+        <a href="#about" data-i18n="nav_about">About</a>
+        <a href="#contacts" data-i18n="nav_contacts">Contacts</a>
+        <a href="tel:+998901234567" class="nav__mobonly">📞 +998 90 123 45 67</a>
+        <a href="#" class="nav__mobonly nav__book" onclick="openBooking();return false;" data-i18n="nav_book">Book a trip</a>
+      </nav>
+
+      <div class="header__actions">
+        <button class="theme-toggle" id="themeBtn" aria-label="Kun / tun" title="Kun / tun rejimi">🌙</button>
+        <div class="lang" id="lang">
+          <button class="lang__btn" data-lang="uz">UZ</button>
+          <button class="lang__btn" data-lang="ru">RU</button>
+          <button class="lang__btn" data-lang="en">EN</button>
+        </div>
+        <div class="header__cta">
+          <a href="tel:+998901234567" class="header__phone">📞 +998 90 123 45 67</a>
+          <button class="btn btn--gold btn--sm" onclick="openBooking()" data-i18n="nav_book">Book a trip</button>
+        </div>
+        <button class="burger" id="burger" aria-label="menu"><span></span><span></span><span></span></button>
+      </div>
+    </div>
+  </header>
+
+  <!-- ===================== HERO ===================== -->
+  <section class="hero">
+    <!-- O'z rasmingizni assets/hero.jpg ga saqlang — avtomatik ishlatiladi.
+         Agar topilmasa, quyidagi zaxira (Maldiv orollari) rasmi ko'rsatiladi. -->
+    <img class="hero__video ken-burns" src="assets/hero.jpg"
+         alt="Maldiv orollari"
+         onerror="this.onerror=null;this.src='https://images.unsplash.com/photo-1573843981267-be1999ff37cd?w=1920&q=80'" />
+    <div class="hero__overlay"></div>
+
+    <div class="container hero__content">
+      <h1 class="hero__title">
+        <span data-i18n="hero_title_1">Make unforgettable journeys</span><br />
+        <span class="accent" data-i18n="hero_title_2">with City Trips</span>
+      </h1>
+      <p class="hero__subtitle" data-i18n="hero_subtitle">
+        Sharq va Turkiya bo‘ylab qulay, xavfsiz va unutilmas sayohatlar.
+      </p>
+
+      <!-- Qidiruv bloki (Manzil / Sana / Sayohatchilar) olib tashlandi — bu yer ataylab ochiq qoldirildi -->
+    </div>
+  </section>
+
+  <!-- ===================== TOURS ===================== -->
+  <section class="section" id="tours">
+    <div class="container">
+      <div class="section__head">
+        <h2 class="section__title" data-i18n="tours_title">Popular tours</h2>
+        <p class="section__sub" data-i18n="tours_sub">Popular destinations across the East and Turkey</p>
+      </div>
+      <div class="tours" id="toursGrid"><!-- filled by JS --></div>
+    </div>
+  </section>
+
+  <!-- ===================== WHY CITY TRIPS (horizontal) ===================== -->
+  <section class="section section--alt" id="why">
+    <div class="container">
+      <div class="section__head">
+        <h2 class="section__title" data-i18n="why_title">Why City Trips?</h2>
+      </div>
+      <div class="why">
+        <div class="why__item">
+          <div class="why__icon">🏆</div>
+          <h3 data-i18n="why_1_t">Best price guarantee</h3>
+          <p data-i18n="why_1_d">Direct contracts with hotels and airlines — you get the best price.</p>
+        </div>
+        <div class="why__item">
+          <div class="why__icon">🧭</div>
+          <h3 data-i18n="why_2_t">Expert guides</h3>
+          <p data-i18n="why_2_d">Professional local guides who make every trip special.</p>
+        </div>
+        <div class="why__item">
+          <div class="why__icon">🕑</div>
+          <h3 data-i18n="why_3_t">24/7 support</h3>
+          <p data-i18n="why_3_d">We are with you before, during and after your journey.</p>
+        </div>
+        <div class="why__item">
+          <div class="why__icon">🛡️</div>
+          <h3 data-i18n="why_4_t">Safe & licensed</h3>
+          <p data-i18n="why_4_d">Officially licensed tour operator with full insurance.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== CONSULTATION (horizontal) ===================== -->
+  <section class="consult" id="consult">
+    <div class="container consult__inner">
+      <div class="consult__text">
+        <h2 data-i18n="consult_title">Still don't know where to fly?</h2>
+        <p data-i18n="consult_sub">Get a free consultation — our experts will pick the perfect tour for you.</p>
+      </div>
+      <div class="consult__actions">
+        <a href="tel:+998901234567" class="btn btn--light consult__phone">
+          <span>📞</span> +998 90 123 45 67
+        </a>
+        <a href="https://t.me/akbarov0909" target="_blank" rel="noopener" class="btn btn--tg">
+          <span>✈</span> <span data-i18n="consult_tg">Contact via Telegram</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== REVIEWS ===================== -->
+  <section class="section section--alt" id="reviews">
+    <div class="container">
+      <div class="section__head">
+        <h2 class="section__title" data-i18n="reviews_title">What our travelers say</h2>
+      </div>
+
+      <div class="reviews">
+        <button class="reviews__nav reviews__nav--prev" id="revPrev" aria-label="prev">‹</button>
+        <div class="reviews__viewport">
+          <div class="reviews__track" id="reviewsTrack"><!-- filled by JS --></div>
+        </div>
+        <button class="reviews__nav reviews__nav--next" id="revNext" aria-label="next">›</button>
+      </div>
+      <div class="reviews__dots" id="reviewsDots"></div>
+    </div>
+  </section>
+
+  <!-- ===================== ABOUT ===================== -->
+  <section class="section" id="about">
+    <div class="container about">
+      <div class="about__text">
+        <h2 class="section__title" data-i18n="about_title">About us</h2>
+        <p data-i18n="about_p1">City Trips is a tour company that has been organizing unforgettable journeys to the East and Turkey for thousands of travelers.</p>
+        <p data-i18n="about_p2">We build every trip around comfort, safety and real experiences. From flights and hotels to guides and excursions — we handle everything so you only enjoy the journey.</p>
+
+        <!-- FOUNDER -->
+        <div class="founder">
+          <div class="founder__avatar">OA</div>
+          <div class="founder__body">
+            <span class="founder__role" data-i18n="founder_role">Founder & CEO</span>
+            <h3 class="founder__name">Otabek Adxamovich</h3>
+            <p class="founder__text" data-i18n="founder_text">City Trips was founded by Otabek Adxamovich — a specialist with many years of experience in tourism who has given unforgettable journeys to thousands of travelers.</p>
+          </div>
+        </div>
+
+        <ul class="about__stats">
+          <li><strong>9</strong><span data-i18n="about_s1">countries</span></li>
+          <li><strong>50 000+</strong><span data-i18n="about_s2">happy travelers</span></li>
+          <li><strong>24/7</strong><span data-i18n="about_s3">support</span></li>
+        </ul>
+      </div>
+      <figure class="about__cert">
+        <!-- Guvohnoma originalini assets/certificate.jpg ga saqlang -->
+        <img src="assets/certificate.jpg" alt="City Trips — davlat ro‘yxatidan o‘tkazilganlik guvohnomasi"
+             onerror="this.onerror=null;this.src='assets/certificate.svg'" />
+        <figcaption data-i18n="about_cert">Official state registration certificate</figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <!-- ===================== CONTACTS / FOOTER ===================== -->
+  <footer class="footer" id="contacts">
+    <div class="container footer__grid">
+      <div class="footer__col">
+        <a href="#top" class="logo logo--chip">
+          <img class="logo__img" src="assets/logo.png" alt="City Trips"
+               onerror="this.onerror=null;this.src='assets/logo.svg'" />
+        </a>
+        <p class="footer__about" data-i18n="footer_about">Your trusted travel partner for unforgettable journeys across the East and Turkey.</p>
+      </div>
+
+      <div class="footer__col">
+        <h4 data-i18n="footer_contacts">Contacts</h4>
+        <ul class="footer__list">
+          <li>📍 <span data-i18n="footer_addr">Tashkent, Uzbekistan</span></li>
+          <li>📞 <a href="tel:+998901234567">+998 90 123 45 67</a></li>
+          <li>✉️ <a href="mailto:info@citytrips.uz">info@citytrips.uz</a></li>
+        </ul>
+      </div>
+
+      <div class="footer__col">
+        <h4 data-i18n="footer_social">Social networks</h4>
+        <div class="socials">
+          <a href="https://t.me/citytrips" target="_blank" rel="noopener" aria-label="Telegram">✈ Telegram</a>
+          <a href="https://instagram.com/citytrips" target="_blank" rel="noopener" aria-label="Instagram">📷 Instagram</a>
+          <a href="https://facebook.com/citytrips" target="_blank" rel="noopener" aria-label="Facebook">f Facebook</a>
+          <a href="https://youtube.com/@citytrips" target="_blank" rel="noopener" aria-label="YouTube">▶ YouTube</a>
+        </div>
+      </div>
+    </div>
+    <div class="footer__bottom">
+      <div class="container">
+        © <span id="year"></span> City Trips. <span data-i18n="footer_rights">All rights reserved.</span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ===================== BOOKING MODAL ===================== -->
+  <div class="modal" id="bookModal" hidden>
+    <div class="modal__backdrop" data-close></div>
+    <div class="modal__box">
+      <button class="modal__close" data-close aria-label="close">✕</button>
+      <h3 class="modal__title" data-i18n="modal_title">Book a tour</h3>
+      <form id="bookForm" class="bookform">
+        <label><span data-i18n="search_dest">Destination</span>
+          <select id="bDest" required></select>
+        </label>
+        <label><span data-i18n="modal_name">Full name</span>
+          <input type="text" id="bName" required />
+        </label>
+        <label><span data-i18n="modal_phone">Phone</span>
+          <input type="tel" id="bPhone" placeholder="+998 __ ___ __ __" required />
+        </label>
+        <label><span data-i18n="modal_people">Travelers</span>
+          <input type="number" id="bPeople" min="1" max="30" value="2" required />
+        </label>
+        <button type="submit" class="btn btn--gold" data-i18n="modal_send">Send request</button>
+      </form>
+      <p class="modal__ok" id="bookOk" hidden data-i18n="modal_ok">Thank you! We will call you back shortly.</p>
+    </div>
+  </div>
+
+  <!-- ===================== DETAILS MODAL ===================== -->
+  <div class="modal" id="detailsModal" hidden>
+    <div class="modal__backdrop" data-dclose></div>
+    <div class="modal__box modal__box--wide">
+      <button class="modal__close" data-dclose aria-label="close">✕</button>
+      <img id="dImg" class="details__img" alt="" />
+      <h3 class="modal__title" id="dTitle"></h3>
+      <p class="details__desc" id="dDesc"></p>
+      <div class="details__meta" id="dMeta"></div>
+      <div class="details__dates" id="dDates"></div>
+      <button class="btn btn--gold details__book" id="dBook" data-i18n="tour_book">Book now</button>
+    </div>
+  </div>
+
+  <script src="js/translations.js?v=11"></script>
+  <script src="js/tours.js?v=11"></script>
+  <script src="js/main.js?v=11"></script>
+</body>
+</html>

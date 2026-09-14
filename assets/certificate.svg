@@ -1,0 +1,57 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 620 820" font-family="Arial,Helvetica,sans-serif">
+  <!-- wooden frame -->
+  <rect width="620" height="820" fill="#8a5a2b"/>
+  <rect x="14" y="14" width="592" height="792" fill="none" stroke="#e6c664" stroke-width="6"/>
+  <rect x="26" y="26" width="568" height="768" fill="#eef1f4"/>
+
+  <!-- header -->
+  <text x="58" y="96" font-size="44" font-weight="800" fill="#1f2733" letter-spacing="1">CERTIFICATE</text>
+  <text x="60" y="122" font-size="15" fill="#5b6472">of state registration of a legal entity</text>
+  <!-- emblem -->
+  <circle cx="540" cy="86" r="30" fill="#c9ccd1"/>
+  <text x="540" y="92" text-anchor="middle" font-size="11" fill="#5b6472">GERB</text>
+
+  <!-- legal entity tag -->
+  <rect x="58" y="150" width="120" height="30" rx="8" fill="#d9dde3"/>
+  <text x="74" y="170" font-size="14" fill="#333">Legal entity</text>
+
+  <text x="60" y="216" font-size="19" font-weight="800" fill="#1f2733">"CITY TRIPS" LIMITED LIABILITY COMPANY</text>
+  <line x1="60" y1="230" x2="560" y2="230" stroke="#c8ccd2"/>
+  <text x="60" y="250" font-size="12.5" fill="#5b6472">Full name of the legal entity with the organizational and legal form</text>
+
+  <text x="60" y="286" font-size="18" font-weight="800" fill="#1f2733">"CITY TRIPS" LLC</text>
+  <line x1="60" y1="300" x2="560" y2="300" stroke="#c8ccd2"/>
+  <text x="60" y="320" font-size="12.5" fill="#5b6472">Abbreviated name of the legal entity</text>
+
+  <text x="60" y="356" font-size="18" font-weight="800" fill="#1f2733">313 056 444</text>
+  <line x1="60" y1="370" x2="560" y2="370" stroke="#c8ccd2"/>
+  <text x="60" y="390" font-size="12.5" fill="#5b6472">Taxpayer Identification Number</text>
+
+  <text x="60" y="438" font-size="17" font-weight="700" fill="#1f2733">Organization (registration, change of information)</text>
+
+  <!-- date / confirmed cards -->
+  <rect x="60" y="458" width="230" height="72" rx="10" fill="#d9dde3"/>
+  <text x="80" y="494" font-size="18" font-weight="800" fill="#1f2733">20.05.2026</text>
+  <text x="80" y="514" font-size="12.5" fill="#5b6472">Date</text>
+  <rect x="304" y="458" width="230" height="72" rx="10" fill="#d9dde3"/>
+  <text x="324" y="494" font-size="18" font-weight="800" fill="#1f2733">3233524</text>
+  <text x="324" y="514" font-size="12.5" fill="#5b6472">Confirmed</text>
+
+  <text x="60" y="568" font-size="12.5" fill="#5b6472">Organizational and legal form:</text>
+  <text x="60" y="588" font-size="14" font-weight="700" fill="#1f2733">LIMITED LIABILITY COMPANY</text>
+
+  <text x="60" y="624" font-size="12.5" fill="#5b6472">Activity address:</text>
+  <text x="60" y="644" font-size="13.5" font-weight="700" fill="#1f2733">TOSHKENT, YUNUSOBOD DISTRICT, OQTEPA MFY,</text>
+  <text x="60" y="662" font-size="13.5" font-weight="700" fill="#1f2733">OQTEPA 5-TOR KO‘CHASI, 20-22-UY</text>
+
+  <text x="60" y="700" font-size="12.5" fill="#5b6472">This certificate is issued by:</text>
+  <text x="60" y="720" font-size="13.5" font-weight="700" fill="#1f2733">TOSHKENT SHAHRI, YUNUSOBOD TUMANI DXM</text>
+
+  <!-- number -->
+  <rect x="404" y="744" width="120" height="26" rx="6" fill="#d9dde3"/>
+  <text x="464" y="762" text-anchor="middle" font-size="13" fill="#333">6723183</text>
+  <!-- qr placeholder -->
+  <rect x="536" y="740" width="48" height="48" fill="#fff" stroke="#333"/>
+  <rect x="542" y="746" width="10" height="10" fill="#111"/><rect x="568" y="746" width="10" height="10" fill="#111"/>
+  <rect x="542" y="772" width="10" height="10" fill="#111"/><rect x="556" y="760" width="6" height="6" fill="#111"/>
+</svg>

@@ -1,0 +1,7 @@
+# OS / editor
+Thumbs.db
+.DS_Store
+*.log
+
+# Reference screenshots (not part of the site)
+photo_*.jpg
