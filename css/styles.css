@@ -1,32 +1,32 @@
 /* ===================== BASE ===================== */
 :root{
-  --navy:#1b1240;
-  --navy-2:#2a1a5e;
+  --navy:#0c3b2e;      /* deep emerald band (footer / consult / overlay) */
+  --navy-2:#14503d;
   --gold:#f5751f;      /* brand orange */
   --gold-2:#ff8b3d;
   --purple:#6c2bd9;    /* brand purple */
   --purple-2:#7d3ce0;
-  --ink:#1c2434;
-  --muted:#6b7688;
-  --line:#e6e9f0;
-  --bg:#ffffff;
-  --bg-alt:#f5f7fb;
-  --surface:#ffffff;
-  --heading:#1b1240;
+  --ink:#33291a;
+  --muted:#7d7259;
+  --line:#e7dcc4;
+  --bg:#f7efe0;        /* beach / desert sand */
+  --bg-alt:#f0e6d0;
+  --surface:#fffdf8;   /* warm white cards */
+  --heading:#2a2113;
   --radius:16px;
   --shadow:0 10px 30px rgba(11,30,59,.10);
   --container:1200px;
 }
 /* ===== DARK (night) THEME ===== */
 html[data-theme="dark"]{
-  --ink:#e7ebf5;
-  --muted:#9aa6bd;
-  --line:#2a3450;
-  --bg:#0e1322;
-  --bg-alt:#141a2c;
-  --surface:#1a2138;
-  --heading:#f2f4fa;
-  --shadow:0 12px 34px rgba(0,0,0,.5);
+  --ink:#e6f2ec;
+  --muted:#9ec5b6;
+  --line:#1e5445;
+  --bg:#062b20;        /* emerald night */
+  --bg-alt:#0a3428;
+  --surface:#0e3f31;
+  --heading:#f1faf5;
+  --shadow:0 12px 34px rgba(0,0,0,.45);
 }
 html{color-scheme:light}
 html[data-theme="dark"]{color-scheme:dark}

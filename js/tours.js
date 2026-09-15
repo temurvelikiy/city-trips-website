@@ -5,11 +5,12 @@
 const TOURS = [
   {
     id:"turkey", flag:"🇹🇷",
-    name:{uz:"Turkiya — Antalya",ru:"Турция — Анталия",en:"Turkey — Antalya"},
+    name:{uz:"Turkiya — Istanbul",ru:"Турция — Стамбул",en:"Turkey — Istanbul"},
     country:{uz:"Turkiya",ru:"Турция",en:"Turkey"},
-    desc:{uz:"Dengiz bo‘yida 5* mehmonxonalar, all inclusive.",ru:"5* отели у моря, всё включено.",en:"5* beachfront hotels, all inclusive."},
-    img:"https://images.unsplash.com/photo-1589561253898-768105ca91a8?w=800&q=80",
-    price:499, days:7, capacity:20, // Turkiya
+    desc:{uz:"Sharq va G‘arb uchrashgan shahar, tarix va bozorlar.",ru:"Город на стыке Востока и Запада, история и базары.",en:"Where East meets West — history and grand bazaars."},
+    img:"assets/turkey.jpg",
+    fallback:"https://images.unsplash.com/photo-1541432901042-2d8bd64b4a9b?w=800&q=80",
+    price:499, days:7, capacity:20, // Turkiya — Istanbul
     available:[["2026-09-15","2026-11-30"],["2026-12-20","2027-01-10"]]
   },
   {

@@ -42,8 +42,8 @@ function renderTours(){
   grid.innerHTML = TOURS.map(t=>`
     <article class="tour">
       <div class="tour__img">
-        <img src="${t.img}" alt="${t.name[LANG]}" loading="lazy"
-             onerror="this.style.display='none'" />
+        <img src="${t.img}" alt="${t.name[LANG]}" data-fallback="${t.fallback||''}"
+             onerror="if(this.dataset.fallback){this.src=this.dataset.fallback;this.dataset.fallback='';}else{this.style.display='none';}" />
         <span class="tour__flag">${t.flag} ${t.country[LANG]}</span>
       </div>
       <div class="tour__body">
