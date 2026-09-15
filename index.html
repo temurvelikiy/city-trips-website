@@ -8,7 +8,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="css/styles.css?v=15" />
+  <link rel="stylesheet" href="css/styles.css?v=16" />
 </head>
 <body>
 
@@ -224,7 +224,9 @@
       <h3 class="modal__title" data-i18n="modal_title">Book a tour</h3>
       <form id="bookForm" class="bookform">
         <label><span data-i18n="search_dest">Destination</span>
-          <select id="bDest" required></select>
+          <input type="text" id="bDest" list="destList" autocomplete="off"
+                 data-i18n-ph="search_dest_ph" placeholder="Where to?" required />
+          <datalist id="destList"></datalist>
         </label>
         <label><span data-i18n="modal_name">Full name</span>
           <input type="text" id="bName" required />
@@ -258,8 +260,8 @@
     </div>
   </div>
 
-  <script src="js/translations.js?v=15"></script>
-  <script src="js/tours.js?v=15"></script>
-  <script src="js/main.js?v=15"></script>
+  <script src="js/translations.js?v=16"></script>
+  <script src="js/tours.js?v=16"></script>
+  <script src="js/main.js?v=16"></script>
 </body>
 </html>

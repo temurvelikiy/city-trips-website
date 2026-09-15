@@ -23,11 +23,16 @@ function applyLang(lang){
     const key = el.getAttribute("data-i18n");
     if(dict[key]) el.textContent = dict[key];
   });
+  // placeholder tarjimalari
+  document.querySelectorAll("[data-i18n-ph]").forEach(el=>{
+    const key = el.getAttribute("data-i18n-ph");
+    if(dict[key]) el.setAttribute("placeholder", dict[key]);
+  });
   document.querySelectorAll(".lang__btn").forEach(b=>
     b.classList.toggle("active", b.dataset.lang===lang));
   renderTours();
   renderReviews();
-  populateBookDest();
+  populateDestList();
 }
 
 /* ================= TOURS GRID ================= */
@@ -125,18 +130,18 @@ detailsModal.querySelectorAll("[data-dclose]").forEach(el=>el.onclick=closeDetai
 const TG_USER = "akbarov0909";            // operator Telegram (@akbarov0909)
 const modal = document.getElementById("bookModal");
 
-function populateBookDest(){
-  const sel = document.getElementById("bDest");
-  if(!sel) return;
-  const cur = sel.value;
-  sel.innerHTML = `<option value="">${I18N[LANG].search_dest_ph}</option>` +
-    TOURS.map(t=>`<option value="${t.id}">${t.flag} ${t.name[LANG]} — $${t.price}</option>`).join("");
-  sel.value = cur;
+// Manzil takliflari (davlat / shahar nomlari) — narxsiz
+function populateDestList(){
+  const dl = document.getElementById("destList");
+  if(!dl) return;
+  dl.innerHTML = (I18N[LANG].places||[]).map(p=>`<option value="${p}"></option>`).join("");
 }
 function openBooking(id){
-  populateBookDest();
+  populateDestList();
   document.getElementById("bookForm").reset();
-  document.getElementById("bDest").value = id || "";
+  // Agar biror tourdan ochilsa — manzilni oldindan yozib qo'yamiz (narxsiz)
+  const t = id && TOURS.find(x=>x.id===id);
+  document.getElementById("bDest").value = t ? t.name[LANG] : "";
   document.getElementById("bPeople").value = 2;
   document.getElementById("bookOk").hidden = true;
   document.getElementById("bookForm").hidden = false;
@@ -148,8 +153,7 @@ modal.querySelectorAll("[data-close]").forEach(el=>el.onclick=closeModal);
 
 document.getElementById("bookForm").addEventListener("submit",e=>{
   e.preventDefault();
-  const t = TOURS.find(x=>x.id===document.getElementById("bDest").value);
-  if(!t) return;
+  const dest   = document.getElementById("bDest").value.trim();
   const name   = document.getElementById("bName").value.trim();
   const phone  = document.getElementById("bPhone").value.trim();
   const people = document.getElementById("bPeople").value;
@@ -160,7 +164,7 @@ document.getElementById("bookForm").addEventListener("submit",e=>{
   }[LANG];
   const msg =
 `🌍 City Trips — ${L.h}
-✈️ ${L.tour}: ${t.flag} ${t.name[LANG]} — $${t.price} (${t.days} ${I18N[LANG].tour_days})
+✈️ ${L.tour}: ${dest}
 👤 ${L.name}: ${name}
 📞 ${L.phone}: ${phone}
 👥 ${L.ppl}: ${people}`;

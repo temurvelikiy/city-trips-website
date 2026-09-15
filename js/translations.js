@@ -53,6 +53,7 @@ const I18N = {
       "🛡️ Tibbiy sug‘urta",
       "🍽️ Nonushta va ekskursiyalar"
     ],
+    places:["Turkiya","Istanbul","Antalya","BAA","Dubay","Abu-Dabi","Misr","Sharm-el-Sheyx","Qohira","Saudiya Arabistoni","Makka","Madina","Tailand","Bangkok","Puket","Maldiv orollari","Malayziya","Kuala-Lumpur","Indoneziya","Bali","Gruziya","Tbilisi","Batumi","Yaponiya","Tokio","Qatar","Doha","Italiya","Fransiya","Ispaniya","Germaniya","Singapur","Vetnam","Janubiy Koreya","Xitoy","Ozarbayjon","Boku","Qozog‘iston"],
   },
 
   ru: {
@@ -108,6 +109,7 @@ const I18N = {
       "🛡️ Медицинская страховка",
       "🍽️ Завтрак и экскурсии"
     ],
+    places:["Турция","Стамбул","Анталия","ОАЭ","Дубай","Абу-Даби","Египет","Шарм-эль-Шейх","Каир","Саудовская Аравия","Мекка","Медина","Таиланд","Бангкок","Пхукет","Мальдивы","Малайзия","Куала-Лумпур","Индонезия","Бали","Грузия","Тбилиси","Батуми","Япония","Токио","Катар","Доха","Италия","Франция","Испания","Германия","Сингапур","Вьетнам","Южная Корея","Китай","Азербайджан","Баку","Казахстан"],
   },
 
   en: {
@@ -163,5 +165,6 @@ const I18N = {
       "🛡️ Medical insurance",
       "🍽️ Breakfast & excursions"
     ],
+    places:["Turkey","Istanbul","Antalya","UAE","Dubai","Abu Dhabi","Egypt","Sharm El Sheikh","Cairo","Saudi Arabia","Mecca","Medina","Thailand","Bangkok","Phuket","Maldives","Malaysia","Kuala Lumpur","Indonesia","Bali","Georgia","Tbilisi","Batumi","Japan","Tokyo","Qatar","Doha","Italy","France","Spain","Germany","Singapore","Vietnam","South Korea","China","Azerbaijan","Baku","Kazakhstan"],
   }
 };
