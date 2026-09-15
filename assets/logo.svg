@@ -1,20 +1,15 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 370 100" font-family="Poppins,Arial,sans-serif">
-  <!-- ===== MARK ===== -->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 106" font-family="Poppins,Arial,sans-serif">
+  <!-- ===== MARK (transparent bg) ===== -->
   <g>
-    <!-- open orange ring (C) -->
-    <path d="M70 34 A28 28 0 1 0 74 60" fill="none" stroke="#F5751F" stroke-width="9" stroke-linecap="round"/>
-    <!-- purple T (top bar + stem) -->
-    <rect x="30" y="28" width="40" height="10" rx="2" fill="#6C2BD9"/>
-    <rect x="45" y="28" width="10" height="34" rx="2" fill="#6C2BD9"/>
-    <!-- purple pin tip -->
-    <path d="M33 58 L67 58 L50 84 Z" fill="#6C2BD9"/>
-    <!-- orange swoosh -->
-    <path d="M30 64 C56 60 82 52 104 40" fill="none" stroke="#F5751F" stroke-width="7" stroke-linecap="round"/>
-    <!-- plane -->
-    <path d="M99 33 l16 4 -11 7 -2.5 -3.5 -6 2.5 3.5 -6 z" fill="#F5751F"/>
+    <path d="M72 34 A30 30 0 1 0 76 62" fill="none" stroke="#F5751F" stroke-width="10" stroke-linecap="round"/>
+    <rect x="30" y="27" width="42" height="11" rx="2" fill="#6C2BD9"/>
+    <rect x="46" y="27" width="11" height="36" rx="2" fill="#6C2BD9"/>
+    <path d="M33 60 L69 60 L51 86 Z" fill="#6C2BD9"/>
+    <path d="M30 66 C57 61 84 53 107 40" fill="none" stroke="#F5751F" stroke-width="8" stroke-linecap="round"/>
+    <path d="M101 32 l17 4 -12 8 -2.5 -4 -6.5 3 4 -6.5 z" fill="#F5751F"/>
   </g>
   <!-- ===== WORDMARK ===== -->
-  <text x="122" y="54" font-weight="800" font-size="33" letter-spacing="1" fill="#F5751F">CITY</text>
-  <text x="212" y="54" font-weight="800" font-size="33" letter-spacing="1" fill="#6C2BD9">TRIPS</text>
-  <text x="124" y="78" font-family="Georgia,'Times New Roman',serif" font-style="italic" font-size="13" fill="#F5751F">Travel. Trusted. Together.</text>
+  <text x="126" y="56" font-weight="800" font-size="36" letter-spacing="1" fill="#F5751F">CITY</text>
+  <text x="222" y="56" font-weight="800" font-size="36" letter-spacing="1" fill="#6C2BD9">TRIPS</text>
+  <text x="128" y="82" font-family="Georgia,'Times New Roman',serif" font-style="italic" font-size="14" fill="#F5751F">Travel. Trusted. Together.</text>
 </svg>

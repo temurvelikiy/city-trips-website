@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 106" font-family="Poppins,Arial,sans-serif">
+  <!-- ===== MARK (dark bg variant) ===== -->
+  <g>
+    <path d="M72 34 A30 30 0 1 0 76 62" fill="none" stroke="#FF8A3D" stroke-width="10" stroke-linecap="round"/>
+    <rect x="30" y="27" width="42" height="11" rx="2" fill="#9B6CF0"/>
+    <rect x="46" y="27" width="11" height="36" rx="2" fill="#9B6CF0"/>
+    <path d="M33 60 L69 60 L51 86 Z" fill="#9B6CF0"/>
+    <path d="M30 66 C57 61 84 53 107 40" fill="none" stroke="#FF8A3D" stroke-width="8" stroke-linecap="round"/>
+    <path d="M101 32 l17 4 -12 8 -2.5 -4 -6.5 3 4 -6.5 z" fill="#FF8A3D"/>
+  </g>
+  <!-- ===== WORDMARK ===== -->
+  <text x="126" y="56" font-weight="800" font-size="36" letter-spacing="1" fill="#FF8A3D">CITY</text>
+  <text x="222" y="56" font-weight="800" font-size="36" letter-spacing="1" fill="#FFFFFF">TRIPS</text>
+  <text x="128" y="82" font-family="Georgia,'Times New Roman',serif" font-style="italic" font-size="14" fill="#FF8A3D">Travel. Trusted. Together.</text>
+</svg>

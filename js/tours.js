@@ -31,15 +31,6 @@ const TOURS = [
     available:[["2026-09-20","2026-12-31"]]
   },
   {
-    id:"saudi", flag:"🇸🇦",
-    name:{uz:"Saudiya — Umra",ru:"Саудовская Аравия — Умра",en:"Saudi Arabia — Umrah"},
-    country:{uz:"Saudiya Arabistoni",ru:"Саудовская Аравия",en:"Saudi Arabia"},
-    desc:{uz:"Makka va Madina ziyorati, to‘liq xizmat.",ru:"Паломничество в Мекку и Медину, полный сервис.",en:"Umrah to Mecca and Medina, full service."},
-    img:"https://images.unsplash.com/photo-1591604129939-f1efa4d9f7fa?w=800&q=80",
-    price:1290, days:10, capacity:30,
-    available:[["2026-10-05","2026-11-25"],["2027-01-15","2027-02-28"]]
-  },
-  {
     id:"thailand", flag:"🇹🇭",
     name:{uz:"Tailand — Puket",ru:"Таиланд — Пхукет",en:"Thailand — Phuket"},
     country:{uz:"Tailand",ru:"Таиланд",en:"Thailand"},
