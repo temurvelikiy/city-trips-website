@@ -183,6 +183,27 @@ const nav = document.getElementById("nav");
 burger.onclick=()=>{ nav.classList.toggle("open"); burger.classList.toggle("active"); };
 nav.querySelectorAll("a").forEach(a=>a.onclick=()=>nav.classList.remove("open"));
 
+/* Mobil: tema + til tugmalarini burger menyusi ichiga ko'chirish */
+const themeBtnEl = document.getElementById("themeBtn");
+const langEl = document.getElementById("lang");
+const headerActions = document.querySelector(".header__actions");
+function placeControls(){
+  const mobile = window.matchMedia("(max-width:760px)").matches;
+  if(mobile && !nav.contains(themeBtnEl)){
+    const wrap = document.createElement("div");
+    wrap.className = "nav__ctrls";
+    wrap.append(themeBtnEl, langEl);
+    nav.appendChild(wrap);
+  } else if(!mobile && nav.contains(themeBtnEl)){
+    const cta = headerActions.querySelector(".header__cta");
+    headerActions.insertBefore(themeBtnEl, cta);
+    headerActions.insertBefore(langEl, cta);
+    nav.querySelectorAll(".nav__ctrls").forEach(el=>el.remove());
+  }
+}
+placeControls();
+window.addEventListener("resize", ()=>{ clearTimeout(window.__ctrlsTO); window.__ctrlsTO=setTimeout(placeControls,150); });
+
 /* ================= INIT ================= */
 document.getElementById("year").textContent = new Date().getFullYear();
 applyLang(LANG);

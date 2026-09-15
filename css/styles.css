@@ -259,6 +259,7 @@ h1,h2,h3,h4{font-family:'Poppins',sans-serif;line-height:1.2}
   .header__cta{display:none}
   .nav__mobonly{display:block;margin-top:6px}
   .nav__mobonly.nav__book{background:var(--gold);color:#fff;text-align:center;border-radius:10px;font-weight:600}
+  .nav__ctrls{display:flex;align-items:center;gap:12px;margin-top:12px;padding-top:14px;border-top:1px solid var(--line)}
   .why{grid-template-columns:1fr}
   .footer__grid{grid-template-columns:1fr}
   .consult__inner{flex-direction:column;text-align:center}
