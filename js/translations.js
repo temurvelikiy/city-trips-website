@@ -33,7 +33,7 @@ const I18N = {
     founder_text:"City Trips — turizm sohasida ko‘p yillik tajribaga ega mutaxassis Otabek Adxamovich tomonidan asos solingan. Uning tajribasi va mehri tufayli minglab sayohatchilar unutilmas dam olishga ega bo‘lgan.",
 
     footer_about:"Sharq va Turkiya bo‘ylab unutilmas sayohatlar uchun ishonchli hamrohingiz.",
-    footer_contacts:"Kontaktlar", footer_addr:"Toshkent, O‘zbekiston",
+    footer_contacts:"Kontaktlar", footer_addr:"Toshkent, Chingiz Aytmatov ko‘chasi, 1 (Bodomzor masjidi ro‘parasida)",
     footer_social:"Ijtimoiy tarmoqlar", footer_rights:"Barcha huquqlar himoyalangan.",
 
     modal_title:"Tour bron qilish", modal_name:"To‘liq ism", modal_phone:"Telefon",
@@ -89,7 +89,7 @@ const I18N = {
     founder_text:"City Trips основана Отабеком Адхамовичем — специалистом с многолетним опытом в сфере туризма. Благодаря его опыту и заботе тысячи путешественников получили незабываемый отдых.",
 
     footer_about:"Ваш надёжный партнёр для незабываемых путешествий по Востоку и Турции.",
-    footer_contacts:"Контакты", footer_addr:"Ташкент, Узбекистан",
+    footer_contacts:"Контакты", footer_addr:"Ташкент, улица Чингиза Айтматова, 1 (напротив мечети Бодомзор)",
     footer_social:"Социальные сети", footer_rights:"Все права защищены.",
 
     modal_title:"Бронирование тура", modal_name:"Полное имя", modal_phone:"Телефон",
@@ -145,7 +145,7 @@ const I18N = {
     founder_text:"City Trips was founded by Otabek Adxamovich — a specialist with many years of experience in tourism. Thanks to his expertise and care, thousands of travelers have enjoyed unforgettable journeys.",
 
     footer_about:"Your trusted travel partner for unforgettable journeys across the East and Turkey.",
-    footer_contacts:"Contacts", footer_addr:"Tashkent, Uzbekistan",
+    footer_contacts:"Contacts", footer_addr:"Tashkent, Chingiz Aytmatov street, 1 (opposite Bodomzor mosque)",
     footer_social:"Social networks", footer_rights:"All rights reserved.",
 
     modal_title:"Book a tour", modal_name:"Full name", modal_phone:"Phone",

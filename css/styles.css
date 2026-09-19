@@ -73,13 +73,8 @@ h1,h2,h3,h4{font-family:'Poppins',sans-serif;line-height:1.2}
 .header__phone:hover{color:var(--gold)}
 .btn--sm{padding:8px 16px;font-size:13.5px;border-radius:10px}
 .logo{display:flex;align-items:center;gap:10px}
-.logo__img{height:58px;width:auto;display:block}
-/* header: temaga qarab yorug'/qorong'i logo (transparent, qutisiz) */
-.logo__img--dark{display:none}
-html[data-theme="dark"] .header .logo__img--light{display:none}
-html[data-theme="dark"] .header .logo__img--dark{display:block}
-/* footer doim to'q fon — qorong'i variant, qutisiz */
-.logo--footer .logo__img{height:56px}
+.logo__img{height:62px;width:auto;display:block}   /* transparent PNG, qutisiz */
+.logo--footer .logo__img{height:60px}
 .nav{display:flex;gap:28px}
 .nav a{font-weight:500;color:var(--ink);font-size:15px;transition:.2s}
 .nav a:hover{color:var(--gold)}
