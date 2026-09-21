@@ -211,3 +211,19 @@ window.addEventListener("resize", ()=>{ clearTimeout(window.__ctrlsTO); window._
 /* ================= INIT ================= */
 document.getElementById("year").textContent = new Date().getFullYear();
 applyLang(LANG);
+
+/* Hero videosini sahifa yuklangandan keyin yuklaymiz — tez ochilish uchun */
+function loadHeroVideo(){
+  const v = document.getElementById("heroVideo");
+  const s = v && v.querySelector("source[data-src]");
+  if(!s) return;
+  // Mobil yoki sekin/tejamkor internetda og'ir videoni yuklamaymiz — poster rasm qoladi
+  const c = navigator.connection || {};
+  const skip = window.innerWidth <= 760 || c.saveData === true || (c.effectiveType && /(^|\b)(slow-2g|2g|3g)\b/.test(c.effectiveType));
+  if(skip) return;
+  s.src = s.dataset.src; s.removeAttribute("data-src");
+  v.load();
+  const p = v.play(); if(p && p.catch) p.catch(()=>{});
+}
+if(document.readyState === "complete") loadHeroVideo();
+else window.addEventListener("load", ()=>setTimeout(loadHeroVideo, 300));
