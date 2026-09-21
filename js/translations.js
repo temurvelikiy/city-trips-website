@@ -31,6 +31,9 @@ const I18N = {
     about_cert:"Davlat ro‘yxatidan o‘tganlik guvohnomasi",
     founder_role:"Asoschisi va rahbari",
     founder_text:"City Trips — turizm sohasida ko‘p yillik tajribaga ega mutaxassis Otabek Adxamovich tomonidan asos solingan. Uning tajribasi va mehri tufayli minglab sayohatchilar unutilmas dam olishga ega bo‘lgan.",
+    office_title:"Bizning ofis",
+    office_desc:"Bizni Toshkent markazidagi qulay joylashuvdagi ofisimizda kutamiz. Har doim sizga xizmat qilishdan mamnunmiz.",
+    office_map:"Xaritada ochish",
 
     footer_about:"Sharq va Turkiya bo‘ylab unutilmas sayohatlar uchun ishonchli hamrohingiz.",
     footer_contacts:"Kontaktlar", footer_addr:"Toshkent, Chingiz Aytmatov ko‘chasi, 1 (Bodomzor masjidi ro‘parasida)",
@@ -87,6 +90,9 @@ const I18N = {
     about_cert:"Свидетельство о государственной регистрации",
     founder_role:"Основатель и руководитель",
     founder_text:"City Trips основана Отабеком Адхамовичем — специалистом с многолетним опытом в сфере туризма. Благодаря его опыту и заботе тысячи путешественников получили незабываемый отдых.",
+    office_title:"Наш офис",
+    office_desc:"Ждём вас в нашем офисе в центре Ташкента — удобное расположение, всегда рады встрече.",
+    office_map:"Открыть на карте",
 
     footer_about:"Ваш надёжный партнёр для незабываемых путешествий по Востоку и Турции.",
     footer_contacts:"Контакты", footer_addr:"Ташкент, улица Чингиза Айтматова, 1 (напротив мечети Бодомзор)",
@@ -143,6 +149,9 @@ const I18N = {
     about_cert:"State registration certificate",
     founder_role:"Founder & CEO",
     founder_text:"City Trips was founded by Otabek Adxamovich — a specialist with many years of experience in tourism. Thanks to his expertise and care, thousands of travelers have enjoyed unforgettable journeys.",
+    office_title:"Our office",
+    office_desc:"Visit us at our office in the center of Tashkent — a convenient location, always happy to see you.",
+    office_map:"Open on map",
 
     footer_about:"Your trusted travel partner for unforgettable journeys across the East and Turkey.",
     footer_contacts:"Contacts", footer_addr:"Tashkent, Chingiz Aytmatov street, 1 (opposite Bodomzor mosque)",
