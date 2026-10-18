@@ -127,7 +127,7 @@ function closeDetails(){ detailsModal.hidden=true; document.body.style.overflow=
 detailsModal.querySelectorAll("[data-dclose]").forEach(el=>el.onclick=closeDetails);
 
 /* ================= BOOKING MODAL → TELEGRAM ================= */
-const TG_USER = "akbarov0909";            // operator Telegram (@akbarov0909)
+const TG_USER = "city_trips";          // operator Telegram (@city_trips)
 const modal = document.getElementById("bookModal");
 
 // Manzil takliflari (davlat / shahar nomlari) — narxsiz
