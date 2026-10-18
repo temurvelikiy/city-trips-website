@@ -168,6 +168,11 @@ document.getElementById("bookForm").addEventListener("submit",e=>{
 👤 ${L.name}: ${name}
 📞 ${L.phone}: ${phone}
 👥 ${L.ppl}: ${people}`;
+  // So'rovni admin panelga saqlaymiz (backend bo'lsa). Statik hostda jim o'tadi.
+  try{
+    fetch("/api/bookings",{method:"POST",headers:{"Content-Type":"application/json"},
+      body:JSON.stringify({dest,name,phone,people,lang:LANG})}).catch(()=>{});
+  }catch(_){}
   try{ navigator.clipboard && navigator.clipboard.writeText(msg); }catch(_){}
   window.open(`https://t.me/${TG_USER}?text=${encodeURIComponent(msg)}`, "_blank");
   document.getElementById("bookForm").hidden = true;

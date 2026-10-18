@@ -52,3 +52,25 @@ so'ng brauzerda `http://localhost:8080` oching.
 ## 🌍 GitHub Pages
 
 Settings → Pages → Branch: `main` / root tanlab, saytni bepul joylashtirish mumkin.
+
+## 🖥️ Server & Admin panel (Railway)
+
+Sayt endi backend bilan ham ishlay oladi (`server.js`, Express):
+- Bron so'rovlari `/api/bookings` ga saqlanadi
+- `/admin` — parolli admin panel (bronlarni ko'rish/boshqarish)
+
+**Lokalda ishga tushirish:**
+```bash
+npm install
+npm start      # http://localhost:3000  (admin: /admin)
+```
+
+**Railway'da deploy (muhit o'zgaruvchilari):**
+| Var | Tavsif |
+|-----|--------|
+| `ADMIN_USER` | admin login |
+| `ADMIN_PASSWORD` | admin parol (albatta o'zgartiring!) |
+| `SESSION_SECRET` | tasodifiy uzun satr |
+| `DATA_DIR` | `/data` (persistent Volume ulang — bronlar saqlanib qolishi uchun) |
+
+> Eslatma: `ADMIN_PASSWORD` ni Railway'da o'rnating — repo public, default parolni ishlatmang.

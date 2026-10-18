@@ -8,3 +8,8 @@ photo_*.jpg
 
 # Source assets (copied into assets/)
 homepage/
+
+# Backend
+node_modules/
+.data/
+.env
