@@ -36,6 +36,29 @@ function writeDb(db) {
   fs.writeFileSync(DB_FILE, JSON.stringify(db, null, 2));
 }
 
+/* ----- Telegram bot (avtomatik xabar) ----- */
+const TG_BOT_TOKEN = process.env.TELEGRAM_BOT_TOKEN || "";
+const TG_CHAT_ID = process.env.TELEGRAM_CHAT_ID || "";
+async function notifyTelegram(b) {
+  if (!TG_BOT_TOKEN || !TG_CHAT_ID) return; // sozlanmagan bo'lsa jim o'tadi
+  const text =
+`🔔 City Trips — Yangi buyurtma
+━━━━━━━━━━━━━━
+👤 F.I.Sh: ${b.name || "—"}
+📞 Telefon: ${b.phone || "—"}
+✈️ Yo'nalish: ${b.dest || "—"}
+📅 Safar sanasi: ${b.date || "—"}
+👥 Odamlar soni: ${b.people || "—"}
+🕒 ${new Date(b.createdAt).toLocaleString("uz-UZ", { hour12: false })}`;
+  try {
+    await fetch(`https://api.telegram.org/bot${TG_BOT_TOKEN}/sendMessage`, {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ chat_id: TG_CHAT_ID, text, disable_web_page_preview: true })
+    });
+  } catch (e) { console.error("Telegram notify error:", e.message); }
+}
+
 /* ----- Middleware ----- */
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
@@ -69,6 +92,7 @@ app.post("/api/bookings", (req, res) => {
     dest: String(b.dest || "").slice(0, 200),
     name: String(b.name || "").slice(0, 120),
     phone: String(b.phone || "").slice(0, 40),
+    date: String(b.date || "").slice(0, 20),
     people: String(b.people || "").slice(0, 10),
     lang: String(b.lang || "").slice(0, 4),
     status: "new",
@@ -79,6 +103,7 @@ app.post("/api/bookings", (req, res) => {
   db.bookings.unshift(booking);
   if (db.bookings.length > 5000) db.bookings.length = 5000;
   writeDb(db);
+  notifyTelegram(booking);            // avtomatik Telegram botga yuboramiz (fire-and-forget)
   res.json({ ok: true, id: booking.id });
 });
 
@@ -163,6 +188,7 @@ app.get("/admin", requireAuth, (req, res) => {
       <td><b>${esc(b.dest) || "—"}</b></td>
       <td>${esc(b.name) || "—"}</td>
       <td><a href="tel:${esc(b.phone)}">${esc(b.phone) || "—"}</a></td>
+      <td>${esc(b.date) || "—"}</td>
       <td>${esc(b.people) || "—"}</td>
       <td>${tag}</td>
       <td>
@@ -190,7 +216,7 @@ app.get("/admin", requireAuth, (req, res) => {
     <div class="card">
       <h3 style="margin-bottom:14px">Bron so'rovlari</h3>
       ${total ? `<div style="overflow-x:auto"><table>
-        <thead><tr><th>Sana</th><th>Yo'nalish</th><th>Ism</th><th>Telefon</th><th>Kishi</th><th>Holat</th><th>Amal</th></tr></thead>
+        <thead><tr><th>Qabul vaqti</th><th>Yo'nalish</th><th>F.I.Sh</th><th>Telefon</th><th>Safar sanasi</th><th>Kishi</th><th>Holat</th><th>Amal</th></tr></thead>
         <tbody>${rows}</tbody></table></div>`
         : `<div class="empty">Hozircha so'rovlar yo'q. Saytdagi "Bron qilish" orqali kelgan so'rovlar shu yerda ko'rinadi.</div>`}
     </div>

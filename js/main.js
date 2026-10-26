@@ -143,6 +143,8 @@ function openBooking(id){
   const t = id && TOURS.find(x=>x.id===id);
   document.getElementById("bDest").value = t ? t.name[LANG] : "";
   document.getElementById("bPeople").value = 2;
+  const dEl = document.getElementById("bDate");
+  if(dEl) dEl.min = new Date().toISOString().split("T")[0];
   document.getElementById("bookOk").hidden = true;
   document.getElementById("bookForm").hidden = false;
   modal.hidden = false;
@@ -151,32 +153,55 @@ function openBooking(id){
 function closeModal(){ modal.hidden=true; document.body.style.overflow=""; }
 modal.querySelectorAll("[data-close]").forEach(el=>el.onclick=closeModal);
 
-document.getElementById("bookForm").addEventListener("submit",e=>{
+function showBookResult(ok){
+  document.getElementById("bookForm").hidden = true;
+  const box = document.getElementById("bookOk");
+  box.textContent = ok ? I18N[LANG].modal_ok : I18N[LANG].modal_err;
+  box.classList.toggle("modal__ok--err", !ok);
+  box.hidden = false;
+}
+
+document.getElementById("bookForm").addEventListener("submit", async e=>{
   e.preventDefault();
   const dest   = document.getElementById("bDest").value.trim();
   const name   = document.getElementById("bName").value.trim();
   const phone  = document.getElementById("bPhone").value.trim();
+  const date   = document.getElementById("bDate").value;
   const people = document.getElementById("bPeople").value;
+  const btn = e.target.querySelector("button[type=submit]");
+  const btnLabel = btn.textContent;
+  btn.disabled = true; btn.textContent = "...";
+
+  // 1) Saytning o'zi ma'lumotni backendga yuboradi -> CRM (admin) + Telegram bot
+  let sent = false;
+  try{
+    const r = await fetch("/api/bookings",{method:"POST",headers:{"Content-Type":"application/json"},
+      body:JSON.stringify({dest,name,phone,date,people,lang:LANG})});
+    sent = r.ok;
+  }catch(_){ sent = false; }
+
+  btn.disabled = false; btn.textContent = btnLabel;
+
+  if(sent){
+    showBookResult(true);                 // avtomatik tushdi — tasdiq oynasi
+    return;
+  }
+  // 2) Zaxira: backend hali ulanmagan bo'lsa (statik host) — lead yo'qolmasin, Telegramga tushamiz
   const L = {
-    uz:{h:"Yangi bron so‘rovi",tour:"Yo‘nalish",name:"Ism",phone:"Telefon",ppl:"Sayohatchilar"},
-    ru:{h:"Новая заявка на бронирование",tour:"Направление",name:"Имя",phone:"Телефон",ppl:"Путешественники"},
-    en:{h:"New booking request",tour:"Destination",name:"Name",phone:"Phone",ppl:"Travelers"}
+    uz:{h:"Yangi buyurtma",tour:"Yo‘nalish",name:"F.I.Sh",phone:"Telefon",date:"Safar sanasi",ppl:"Odamlar soni"},
+    ru:{h:"Новая заявка",tour:"Направление",name:"Ф.И.О",phone:"Телефон",date:"Дата поездки",ppl:"Человек"},
+    en:{h:"New request",tour:"Destination",name:"Full name",phone:"Phone",date:"Travel date",ppl:"People"}
   }[LANG];
   const msg =
 `🌍 City Trips — ${L.h}
 ✈️ ${L.tour}: ${dest}
 👤 ${L.name}: ${name}
 📞 ${L.phone}: ${phone}
+📅 ${L.date}: ${date}
 👥 ${L.ppl}: ${people}`;
-  // So'rovni admin panelga saqlaymiz (backend bo'lsa). Statik hostda jim o'tadi.
-  try{
-    fetch("/api/bookings",{method:"POST",headers:{"Content-Type":"application/json"},
-      body:JSON.stringify({dest,name,phone,people,lang:LANG})}).catch(()=>{});
-  }catch(_){}
   try{ navigator.clipboard && navigator.clipboard.writeText(msg); }catch(_){}
   window.open(`https://t.me/${TG_USER}?text=${encodeURIComponent(msg)}`, "_blank");
-  document.getElementById("bookForm").hidden = true;
-  document.getElementById("bookOk").hidden = false;
+  showBookResult(true);
 });
 
 /* ================= NAV / BURGER / LANG / THEME ================= */

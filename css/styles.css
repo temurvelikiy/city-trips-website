@@ -251,7 +251,8 @@ h1,h2,h3,h4{font-family:'Poppins',sans-serif;line-height:1.2}
 .bookform input,.bookform select{border:1px solid var(--line);border-radius:10px;padding:12px;font-size:15px;font-family:inherit;background:var(--surface);color:var(--ink)}
 .bookform input:focus,.bookform select:focus{outline:none;border-color:var(--gold)}
 .bookform .btn{margin-top:6px}
-.modal__ok{margin-top:16px;background:#e9f8ef;color:#1f7a45;padding:14px;border-radius:10px;text-align:center;font-weight:600}
+.modal__ok{margin-top:16px;background:#e9f8ef;color:#1f7a45;padding:16px;border-radius:10px;text-align:center;font-weight:600;line-height:1.5}
+.modal__ok--err{background:#fdecec;color:#c0392b}
 
 /* ===================== RESPONSIVE ===================== */
 @media(max-width:980px){

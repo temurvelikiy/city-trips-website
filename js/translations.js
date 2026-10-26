@@ -40,7 +40,9 @@ const I18N = {
     footer_social:"Ijtimoiy tarmoqlar", footer_rights:"Barcha huquqlar himoyalangan.",
 
     modal_title:"Tour bron qilish", modal_name:"To‘liq ism", modal_phone:"Telefon",
-    modal_people:"Sayohatchilar", modal_send:"So‘rov yuborish", modal_ok:"✅ Telegram ochildi — tayyor xabarni yuborish tugmasini bosing. Rahmat!",
+    modal_people:"Odamlar soni", modal_date:"Safar sanasi", modal_send:"Buyurtma yuborish",
+    modal_ok:"✅ Buyurtmangiz qabul qilindi! Operatorimiz tez orada siz bilan bog‘lanadi.",
+    modal_err:"Xatolik yuz berdi. Iltimos, telefon orqali bog‘laning: +998 88 828 33 33",
 
     res_ok:"Ajoyib! Bu sanaga tour mavjud:",
     res_no:"Afsuski, tanlangan sanaga bu yo‘nalishda tour yo‘q. Boshqa sana tanlang yoki konsultatsiya oling.",
@@ -99,7 +101,9 @@ const I18N = {
     footer_social:"Социальные сети", footer_rights:"Все права защищены.",
 
     modal_title:"Бронирование тура", modal_name:"Полное имя", modal_phone:"Телефон",
-    modal_people:"Путешественники", modal_send:"Отправить заявку", modal_ok:"✅ Telegram открыт — нажмите «отправить» готовое сообщение. Спасибо!",
+    modal_people:"Количество человек", modal_date:"Дата поездки", modal_send:"Отправить заявку",
+    modal_ok:"✅ Ваша заявка принята! Наш оператор свяжется с вами в ближайшее время.",
+    modal_err:"Произошла ошибка. Позвоните нам: +998 88 828 33 33",
 
     res_ok:"Отлично! На эту дату тур доступен:",
     res_no:"К сожалению, на выбранную дату тура по этому направлению нет. Выберите другую дату или получите консультацию.",
@@ -158,7 +162,9 @@ const I18N = {
     footer_social:"Social networks", footer_rights:"All rights reserved.",
 
     modal_title:"Book a tour", modal_name:"Full name", modal_phone:"Phone",
-    modal_people:"Travelers", modal_send:"Send request", modal_ok:"✅ Telegram opened — just press send on the ready message. Thank you!",
+    modal_people:"Number of people", modal_date:"Travel date", modal_send:"Send request",
+    modal_ok:"✅ Your request has been received! Our operator will contact you shortly.",
+    modal_err:"Something went wrong. Please call us: +998 88 828 33 33",
 
     res_ok:"Great! A tour is available on this date:",
     res_no:"Unfortunately there is no tour to this destination on the selected date. Try another date or get a consultation.",
