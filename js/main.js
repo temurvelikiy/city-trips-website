@@ -128,6 +128,9 @@ detailsModal.querySelectorAll("[data-dclose]").forEach(el=>el.onclick=closeDetai
 
 /* ================= BOOKING MODAL → TELEGRAM ================= */
 const TG_USER = "city_trips";          // operator Telegram (@city_trips)
+// Backend manzili: Railway'da/localda — nisbiy; citytrips.uz (GitHub Pages)dan — Railway URL
+const API_BASE = (/railway\.app$/.test(location.hostname) || /^(localhost|127\.0\.0\.1)$/.test(location.hostname))
+  ? "" : "https://city-trips-website-production.up.railway.app";
 const modal = document.getElementById("bookModal");
 
 // Manzil takliflari (davlat / shahar nomlari) — narxsiz
@@ -175,7 +178,7 @@ document.getElementById("bookForm").addEventListener("submit", async e=>{
   // 1) Saytning o'zi ma'lumotni backendga yuboradi -> CRM (admin) + Telegram bot
   let sent = false;
   try{
-    const r = await fetch("/api/bookings",{method:"POST",headers:{"Content-Type":"application/json"},
+    const r = await fetch(API_BASE + "/api/bookings",{method:"POST",headers:{"Content-Type":"application/json"},
       body:JSON.stringify({dest,name,phone,date,people,lang:LANG})});
     sent = r.ok;
   }catch(_){ sent = false; }

@@ -63,6 +63,16 @@ async function notifyTelegram(b) {
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.set("trust proxy", 1); // Railway proxy ortida
+
+// CORS — forma boshqa domendan (citytrips.uz, github.io) yuborishi uchun
+app.use("/api", (req, res, next) => {
+  res.header("Access-Control-Allow-Origin", "*");
+  res.header("Access-Control-Allow-Methods", "POST, OPTIONS");
+  res.header("Access-Control-Allow-Headers", "Content-Type");
+  if (req.method === "OPTIONS") return res.sendStatus(204);
+  next();
+});
+
 app.use(session({
   secret: SESSION_SECRET,
   resave: false,
