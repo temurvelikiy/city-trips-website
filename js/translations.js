@@ -41,7 +41,7 @@ const I18N = {
 
     modal_title:"Tour bron qilish", modal_name:"To‘liq ism", modal_phone:"Telefon",
     modal_people:"Odamlar soni", modal_date:"Safar sanasi", modal_send:"Buyurtma yuborish",
-    modal_ok:"✅ Buyurtmangiz qabul qilindi! Operatorimiz tez orada siz bilan bog‘lanadi.",
+    modal_ok:"✅ Buyurtmangiz qabul qilindi! Yaqin orada menejerlarimiz siz bilan bog‘lanishadi.",
     modal_err:"Xatolik yuz berdi. Iltimos, telefon orqali bog‘laning: +998 88 828 33 33",
 
     res_ok:"Ajoyib! Bu sanaga tour mavjud:",
@@ -102,7 +102,7 @@ const I18N = {
 
     modal_title:"Бронирование тура", modal_name:"Полное имя", modal_phone:"Телефон",
     modal_people:"Количество человек", modal_date:"Дата поездки", modal_send:"Отправить заявку",
-    modal_ok:"✅ Ваша заявка принята! Наш оператор свяжется с вами в ближайшее время.",
+    modal_ok:"✅ Ваша заявка принята! Наши менеджеры свяжутся с вами в ближайшее время.",
     modal_err:"Произошла ошибка. Позвоните нам: +998 88 828 33 33",
 
     res_ok:"Отлично! На эту дату тур доступен:",
@@ -163,7 +163,7 @@ const I18N = {
 
     modal_title:"Book a tour", modal_name:"Full name", modal_phone:"Phone",
     modal_people:"Number of people", modal_date:"Travel date", modal_send:"Send request",
-    modal_ok:"✅ Your request has been received! Our operator will contact you shortly.",
+    modal_ok:"✅ Your request has been received! Our managers will contact you shortly.",
     modal_err:"Something went wrong. Please call us: +998 88 828 33 33",
 
     res_ok:"Great! A tour is available on this date:",
